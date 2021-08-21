@@ -8,7 +8,7 @@ function MainNavigation() {
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand>
-          <Link to="/" className={classes.logo}>React Bootstrap</Link>
+          <Link to="/" className={classes.logo}>KassaELF Corner</Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
