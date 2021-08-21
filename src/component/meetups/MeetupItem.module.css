@@ -1,0 +1,12 @@
+.image{
+    max-height: 400px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #666;
+}
+
+.cardslot{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

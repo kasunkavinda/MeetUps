@@ -1,0 +1,21 @@
+.headmenu{
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.headmenu:hover{
+    color: pink;
+    text-decoration: none;
+}
+
+.logo{
+    font-size: xx-large;
+    text-transform: uppercase;
+    color: pink;
+}
+
+.logo:hover{
+    color: pink;
+    text-decoration: none;
+}
