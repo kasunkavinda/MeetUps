@@ -1,6 +1,6 @@
+import { useState, useEffect } from "react";
 import MeetupList from "./meetups/MeetupList";
 import Profession from "./Profession";
-import { Container, Row, Col } from "react-bootstrap";
 
 const DUMMY_DATA = [
   {
@@ -23,11 +23,44 @@ const DUMMY_DATA = [
 ];
 
 function AllMeetup() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadedMeetups, setLoadedMeetups] = useState([]);
+
+  useEffect(() => {
+    setIsLoading(true);
+    fetch(
+      "https://portfoliosite-16747-default-rtdb.firebaseio.com/meetupscollection.json"
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        const meetups = [];
+
+        for (const key in data) {
+          const meetup = {
+            id: key,
+            ...data[key],
+          };
+
+          meetups.push(meetup);
+        }
+        setIsLoading(false);
+        setLoadedMeetups(meetups);
+      });
+  }, []);
+
+  if (isLoading) {
+    <section>
+      <p>Loading.....</p>
+    </section>;
+  }
   return (
-    <Container>
+    <div>
       <Profession />
-      <MeetupList meetups={DUMMY_DATA} />
-    </Container>
+      {/* <MeetupList meetups={DUMMY_DATA} /> */}
+      <MeetupList meetups={loadedMeetups} />
+    </div>
   );
 }
 

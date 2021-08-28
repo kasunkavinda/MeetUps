@@ -1,11 +1,10 @@
 import { Row, Col, Card, Button } from "react-bootstrap";
-import CustomCard from "../ui/CustomCard";
 import classes from "./MeetupItem.module.css";
 function MeetupItem(props) {
   return (
     <Row>
       <Col>
-        {/* <CustomCard> */}
+
           <Card className={classes.cardslot}>
             <Card.Img
               variant="top"
@@ -19,7 +18,7 @@ function MeetupItem(props) {
               <Button variant="primary">To Favorites</Button>
             </Card.Body>
           </Card>
-        {/* </CustomCard> */}
+
       </Col>
     </Row>
   );

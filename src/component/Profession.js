@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Row, Col, Button, ButtonGroup, Alert, Badge } from "react-bootstrap";
+import { Row, Col, Button, ButtonGroup, Alert } from "react-bootstrap";
 import classes from "./Profession.module.css";
 
 function Profession() {
